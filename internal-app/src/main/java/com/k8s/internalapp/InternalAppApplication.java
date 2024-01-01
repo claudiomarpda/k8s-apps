@@ -16,7 +16,7 @@ public class InternalAppApplication {
 
 @RestController
 class InternalController {
-    @GetMapping("/greetings")
+    @GetMapping("/hello")
     public String hello() {
         return "hello from internal app";
     }
