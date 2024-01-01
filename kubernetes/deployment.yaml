@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: internal-app-deployment
+  labels:
+    app: internal-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: internal-app
+  template:
+    metadata:
+      labels:
+        app: internal-app
+    spec:
+      containers:
+        - name: internal-app
+          image: internal-app:0.0.1
+          ports:
+            - containerPort: 8081
