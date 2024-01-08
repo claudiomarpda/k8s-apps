@@ -4,7 +4,7 @@ metadata:
   labels:
     app: internal-app-deployment
   name: internal-app-deployment
-#  namespace: k8s-apps
+  namespace: k8s-apps
 spec:
   #replicas: 1
   selector:

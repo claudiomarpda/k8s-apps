@@ -4,10 +4,9 @@ metadata:
   labels:
     app: internal-app-service
   name: internal-app-service
-#  namespace: k8s-apps
+  namespace: k8s-apps
 spec:
   ports:
-    - name: hello-port
       protocol: TCP
       port: 8081
       targetPort: 8081
