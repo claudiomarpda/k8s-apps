@@ -2,9 +2,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   labels:
+    namespace: k8s-apps
     serviceMonitorSelector: internal-app-monitor
   name: internal-app-monitor
-  namespace: k8s-apps
 spec:
   endpoints:
     - interval: 5s

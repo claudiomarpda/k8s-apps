@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: internal-app-deployment
+    namespace: k8s-apps
   name: internal-app-deployment
-  namespace: k8s-apps
 spec:
   #replicas: 1
   selector:

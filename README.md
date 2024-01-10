@@ -16,7 +16,7 @@ docker images
 docker rm container_id
 docker rmi image_id
 kubectl get deploy
-kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh
+kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh -n k8s-apps
 wget http://localhost:8081/hello
 kubectl describe service internal-app   
 kubectl get pods --show-labels
@@ -31,6 +31,7 @@ kubectl delete --all prometheus
 ```
 
 ```shell kubectl deploy
+kubectl apply -f .\kubernetes\namespace.yaml
 kubectl apply -f .\kubernetes\internal-app\deployment.yaml
 kubectl apply -f .\kubernetes\internal-app\service.yaml
 #kubectl port-forward deployments/internal-app-deployment 8081
