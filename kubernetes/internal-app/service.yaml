@@ -7,7 +7,7 @@ metadata:
   name: internal-app-service
 spec:
   ports:
-      protocol: TCP
+    - protocol: TCP
       port: 8081
       targetPort: 8081
   selector:
