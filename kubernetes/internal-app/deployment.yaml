@@ -20,3 +20,9 @@ spec:
           image: internal-app:0.0.1
           ports:
             - containerPort: 8081
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: internal-app-configmap
+                  key: spring_profiles_active
