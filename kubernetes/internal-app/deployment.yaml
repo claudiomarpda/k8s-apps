@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: internal-app-deployment
+    app: internal-app
     namespace: k8s-apps
-  name: internal-app-deployment
+  name: internal-app
 spec:
   #replicas: 1
   selector:
