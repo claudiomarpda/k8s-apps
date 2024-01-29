@@ -26,3 +26,19 @@ spec:
                 configMapKeyRef:
                   name: internal-app-configmap
                   key: spring_profiles_active
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-db-secrets
+                  key: mongo_root_username
+            - name: MONGODB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-db-secrets
+                  key: mongo_root_password
+            - name: MONGODB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: mongo-db-configmap
+                  key: database_url
+
